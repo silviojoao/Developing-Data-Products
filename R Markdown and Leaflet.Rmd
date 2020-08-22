@@ -1,0 +1,13 @@
+---
+output: ioslides_presentation
+---
+```{r, include=F}
+library(dplyr)
+library(leaflet)
+```
+## 22/08/2020
+```{r, tidy=TRUE, tidy.opts=list(width.cutoff=70), echo=F}
+points <- data.frame('lat'= runif(10, min=-30, max=-20), 'lng'=runif(10, min=-70, max=-60))
+points %>% leaflet() %>% addTiles() %>% addMarkers()
+```
+
